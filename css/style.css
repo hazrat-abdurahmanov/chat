@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    outline: none;
+}
+html, body{
+    height: 100%;
+}
+.chat{
+    height: 100%;
+    display: flex;
+}
+    /* Sidebar */
+.chat .sidebar{
+    width: 360px;
+    min-width: 360px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+    /* Header */
+.chat .sidebar .header{
+    height: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.chat .sidebar .header h1{
+    font-size: 17px;
+}
+.chat .sidebar .header i{
+    font-size: 25px;
+    padding: 5px 15px;
+    color: rgb(0, 153, 255);
+}
+    /* Search */
+.chat .sidebar .search{
+    height: 50px;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;  
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+.chat .sidebar .search input{
+    height: 25px;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 0 0 0 83px;
+}
+.chat .sidebar .search i{
+    position: absolute;
+    font-size: 13px;
+    color: #999;
+    left: 80px;
+    top: 18px;
+}
+    /* Contacts */
+.chat .sidebar .contacts{
+    overflow: auto;
+}
+.chat .sidebar .contacts .contact{
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.chat .sidebar .contacts .contact img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.chat .sidebar .contacts .contact .logo{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50px;
+    left: 50px;    
+}
+.chat .sidebar .contacts .contact .texts{
+    padding: 0 10px;
+}
+.chat .sidebar .contacts .contact .texts i{
+    color: rgb(73, 73, 161);
+}
+.chat .sidebar .contacts .contact .texts .message{
+    color: #999;
+    font-size: 12px;
+}
+.chat .sidebar .contacts .contact .time{
+    margin-left: auto;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.chat .sidebar .contacts .active{
+    background-color: #f5f5f5;
+}
+    /* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+    /* Content */
+.chat .content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+    /* Message-header */
+.chat .content .message-header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    min-height: 60px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+}
+.chat .content .message-header .header-text{
+    margin: 0 auto;
+}
+.chat .content .message-header .header-text .header-msg{
+    color: #999;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+.chat .content .message-header .header-icons a i{
+    margin-left: auto;
+    font-size: 22px;
+    color: #999;
+}
+.chat .content .message-header .header-icons a .actv{
+    color: #1A73E8;
+}
+.chat .content .message-header .header-icons i{
+    padding-left: 15px;
+}
+    /* Message-content */
+.chat .content .message-content{
+    display: flex;
+    flex: 1;
+}
+    /* Message-left */
+.chat .content .message-content .message-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+}
+.chat .content .message-content .message-left .messages{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.chat .content .message-content .message-left .messages .messages-time{
+    color: #999;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;  
+}
+.chat .content .message-content .message-left .messages .message-me{
+    background-color: #1A73E8;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    align-self: flex-end;
+    margin-right: 40px;
+}
+    /* Form */
+.chat .content .message-content .message-left .form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid #ddd;
+    padding: 15px 12px;
+}
+.chat .content .message-content .message-left .form input{
+  width: 80%;
+  padding: 0 5px;
+}
+.chat .content .message-content .message-left .form .form-icons a{
+    padding-left: 0 12px;
+    margin-left: 15px;
+}
+.chat .content .message-content .message-left .form .form-icons a i{
+    font-size: 25px;
+    color: #999;
+}
+.chat .content .message-content .message-left .form .form-icons a .actv{
+    color: #1A73E8;
+}
+    /* Message-right */
+.chat .content .message-content .message-right{
+    width: 360px;
+}
+.chat .content .message-content .message-right .contact{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.chat .content .message-content .message-right .contact img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.chat .content .message-content .message-right .contact .logo{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.chat .content .message-content .message-right .contact .texts{
+    padding: 0 10px;
+}
+.chat .content .message-content .message-right .contact .texts .message{
+    color: #999;
+    font-size: 12px;
+}
+.chat .content .message-content .message-right .notifications{
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.chat .content .message-content .message-right .notifications input{
+    margin-right: 8px;
+}
+.chat .content .message-content .message-right .fb-profile{
+    padding: 15px;
+}
+.chat .content .message-content .message-right .fb-profile p{
+    color: #999;
+    padding: 7px 0;
+    font-size: 15px;
+}
+.chat .content .message-content .message-right .fb-profile a{
+    color: #1A73E8;
+    padding: 7px 0;
+}
